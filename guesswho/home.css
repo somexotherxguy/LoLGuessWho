@@ -20,15 +20,29 @@
 .col-2 {width: 74%;}
 .col-3 {width: 13%;}
 
-/*Background*/
-body{
-	background-image: url(images/3champsmastery.png);
+/*Background
+html {
+    background-image: url("images/threechampsmastery.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-	/*background-size: 100%;
-	background-repeat: no-repeat;
-	margin: 0px;*/
+}*/
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
 }
 
 /*Top Bar*/
@@ -51,7 +65,7 @@ body{
     padding: 20px;
 }
 
-div.transbox{
+#transbox{
 	width: 100%;
 	height: 200px;
 	background-color: #1a1a1a;
@@ -74,6 +88,29 @@ div.transbox{
 	text-align: center;
 	width: 300px;
 	opacity: 0.8;
+    border: 0px;
 }
 
+/* ---------------------- */
+#searchbartwo{
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+#summonersearch2{
+    display: block;
+	color: #1a1a1a;
+	background-color: #cccccc;
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size: 24px;
+	text-align: center;
+	width: 300px;
+	opacity: 0.8;
+    border: 0px;
+}
 

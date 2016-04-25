@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="guess.css" rel="stylesheet">
+<title>Guess Who? - Guess</title>
+
+</head>
+<body>
+
+<!-- ALL JAVASCRIPT GOES HERE -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- ALL HTML GOES HERE -->
+<div id="bg"  style="z-index:-1">
+    <img id="bgimg" src="images/bg-howling-abyss.jpg" alt="">
+</div>
+
+<div id="transbox">
+    <div id="guesswho"><span id="pagetitle">Guess Who?</span></div>
+    <div id="intro"><span id="paragraph"  style="">Search again for a different summoner and try to guess their top 3 mastery champions.</span></div>
+    <form id="summonersearchform">
+        <input id="summonersearch" type="text" placeholder="Search for a Summoner..." ></input>
+    </form>
+</div>
+<div style="padding: 10px;">
+    <div id="name">
+        <span id="sumname">Summoner Name</span>
+    </div>
+</div>
+
+<div id="champimgs">
+    <img class="loadingart" id="champone" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg">
+    <img class="loadingart" id="champtwo" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ekko_0.jpg">
+    <img class="loadingart" id="champthree" src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Lulu_0.jpg">
+</div>
+
+<div id="guesstransbar">
+    <form id="champguessform">
+        <input id="champguess" type="text" placeholder="Search for a Champion..." ></input>
+    </form>
+</div>
+
+<script src="guess.js" type="text/javascript"></script>
+</body>
+</html>
