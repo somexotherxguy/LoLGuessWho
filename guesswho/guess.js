@@ -67,10 +67,13 @@
     		if(champGuessName==champData[x].key){
     			if(x == 0) {
                     document.getElementById('champtwo').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
+                    document.getElementById('champtwo').style.opacity = 1;
                 } else if(x == 1) {
                     document.getElementById('champone').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
+                    document.getElementById('champone').style.opacity = 1;
                 } else if(x == 2) {
                     document.getElementById('champthree').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
+                    document.getElementById('champthree').style.opacity = 1;
                 }
     		}
     	}
