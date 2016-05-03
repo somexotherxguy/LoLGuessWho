@@ -61,6 +61,7 @@
     
     function championSearchGuess(event){
     	var champGuessName = document.getElementById('champguess').value;
+        document.getElementById('champguess').value = "";
     	console.log(champGuessName);
     	for(var x = 0; x < champData.length; x++){
     		if(champGuessName==champData[x].key){
