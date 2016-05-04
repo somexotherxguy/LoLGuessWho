@@ -59,6 +59,7 @@
     var mytimer = window.setInterval(function(){timer()}, 1000);
     
     //Set Interval to check for a win
+    var winchecker = window.setInterval(function(){checkWin()}, 1000);
     
     //Event Listeners are added here
     document.getElementById('summonersearchform').addEventListener('submit', function(event) { summonerSearchGuess(event); });
@@ -144,11 +145,18 @@
         var champimg1 = document.getElementById('champtwo');
         var champimg2 = document.getElementById('champone');
         var champimg3 = document.getElementById('champthree');
-        if(champimg1.src !== "images/questionmark.jpg"){
-            if(champimg2.src !== "images/questionmark.jpg"){
-                if(champimg3.src !== "images/questionmark.jpg"){
+        if(champimg1.src.indexOf("images/questionmark.jpg") === -1){
+            if(champimg2.src.indexOf("images/questionmark.jpg") === -1){
+                if(champimg3.src.indexOf("images/questionmark.jpg") === -1){
                     if(timerRunning === true){
                         window.clearInterval(mytimer);
+                        window.clearInterval(winchecker);
+                        document.getElementById('sec').style.textShadow = "1px 1px 10px #00ff00";
+                        document.getElementById('min').style.textShadow = "1px 1px 10px #00ff00";
+                    } else {
+                        window.clearInterval(winchecker);
+                        document.getElementById('sec').style.textShadow = "1px 1px 10px #ff0000";
+                        document.getElementById('min').style.textShadow = "1px 1px 10px #ff0000";
                     }
                 }
             }
