@@ -95,7 +95,7 @@ html {
 /* Champion images */
 #champimgs{
     padding: 0px;
-    width: 1015px;
+    width: 992px;
     margin: auto;
 }
 
@@ -103,18 +103,58 @@ img.loadingart{
     padding: 10px;
 }
 
-#name{
-    padding: 10px;
-    width: 350px;
-    margin: auto;
-    background-color: #1a1a1a;
-    opacity: 0.8;
-    text-align: center;
+#infobar{
+    position: relative;
+    padding: 20px;
+    width: 945px;
+    margin: 0px auto;
 }
+
 #sumname{
+    display: inline-block;
+    padding: 10px;
     font-size: 20px;
     color: #ffffff;
     font-family: "Arial", Helvetica, sans-serif;
+    background-color: #1a1a1a;
+    opacity: 0.8;
+    width: 250px;
+    text-align: center;
+}
+
+#guesstext{
+    display: inline-block;
+    padding: 10px;
+    width: 245px;
+    background-color: #1a1a1a;
+    opacity: 0.8;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Arial", Helvetica, sans-serif;
+    text-align: center;
+}
+
+#timertext{
+    display: inline-block;  
+    padding: 10px;
+    background-color: #1a1a1a;
+    opacity: 0.8;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Arial", Helvetica, sans-serif;
+}
+
+#giveup{
+    position: relative;
+    top: -1px;
+    padding: 8px;
+    display: inline-block; 
+    background-color: #262626;
+    opacity: .9;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    border: solid 3px;
 }
 
 /* bottom search bar */
