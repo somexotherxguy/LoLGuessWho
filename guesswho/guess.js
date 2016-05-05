@@ -105,12 +105,15 @@
     
     //Checks if the champion guess is correct
     function championSearchGuess(event){
+        var re = /(\b[a-z](?!\s))/g;
+        var s = "fort collins, croton-on-hudson, harper's ferry, coeur d'alene, o'fallon"; 
     	var champGuessName = document.getElementById('champguess').value;
+        champGuessName = champGuessName.replace(re, function(x){return x.toUpperCase();});
         document.getElementById('champguess').value = "";
     	console.log(champGuessName);
     	for(var x = 0; x < champData.length; x++){
-            console.log(champData[x].key);
-    		if(champGuessName==champData[x].key){
+            console.log(champData[x].name);
+    		if(champGuessName==champData[x].name){
     			if(x == 0) {
     	            document.getElementById('champtwo').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
     	            document.getElementById('champtwopoints').style.visibility='visible';
@@ -203,5 +206,9 @@
                 }
             }
         }
+    }
+    
+    function toTitleCase(str){
+        return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
     }
 })();
