@@ -97,10 +97,47 @@ html {
     padding: 0px;
     width: 992px;
     margin: auto;
+    position: relative;
 }
 
 img.loadingart{
     padding: 10px;
+}
+
+#champonepoints{
+	visibility: hidden;
+	z-index: 100;
+	position: absolute;
+  	color: white;
+  	font-size: 48px;
+  	font-weight: bold;
+  	left: 125px;
+  	top: 450px;
+  	font-family: Steelfish;
+}
+
+#champtwopoints{
+	visibility: hidden;
+	z-index: 100;
+	position: absolute;
+  	color: white;
+  	font-size: 48px;
+  	font-weight: bold;
+  	left: 457px;
+  	top: 450px;
+  	font-family: Steelfish;
+}
+
+#champthreepoints{
+	visibility: hidden;
+	z-index: 100;
+	position: absolute;
+  	color: white;
+  	font-size: 48px;
+  	font-weight: bold;
+  	left: 791px;
+  	top: 450px;
+  	font-family: Steelfish;
 }
 
 #infobar{
@@ -155,6 +192,11 @@ img.loadingart{
     color: #ffffff;
     font-size: 20px;
     border: solid 3px;
+}
+
+#giveup:hover{
+	background-color: #000000;
+	opacity: .8;
 }
 
 /* bottom search bar */
