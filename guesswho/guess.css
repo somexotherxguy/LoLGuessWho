@@ -116,6 +116,14 @@ img.loadingart{
   	font-family: Steelfish;
 }
 
+#champonemastery{
+	visibility: hidden;
+	z-index: 100;
+	position: absolute;
+  	left: 105px;
+  	top: 410px;
+}
+
 #champtwopoints{
 	visibility: hidden;
 	z-index: 100;
@@ -128,6 +136,14 @@ img.loadingart{
   	font-family: Steelfish;
 }
 
+#champtwomastery{
+	visibility: hidden;
+	z-index: 100;
+	position: absolute;
+  	left: 437px;
+  	top: 410px;
+}
+
 #champthreepoints{
 	visibility: hidden;
 	z-index: 100;
@@ -138,6 +154,14 @@ img.loadingart{
   	left: 791px;
   	top: 450px;
   	font-family: Steelfish;
+}
+
+#champthreemastery{
+	visibility: hidden;
+	z-index: 100;
+	position: absolute;
+  	left: 768px;
+  	top: 410px;
 }
 
 #infobar{

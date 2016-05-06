@@ -25,6 +25,21 @@
                 var champUrl = "http://lolguesswho-env.us-west-2.elasticbeanstalk.com/champion/?championid=" + masteryData[i].championId;
                 if(i==0){
                 	champTwoPoints=masteryData[i].championPoints;
+                	if(champTwoPoints>=21600){
+                		document.getElementById('champtwomastery').src="images/champMasteryFive.png";
+                	}
+                	else if(champTwoPoints>=12600){
+                		document.getElementById('champtwomastery').src="images/champMasteryFour.png";
+                	}
+                	else if(champTwoPoints>=6000){
+                		document.getElementById('champtwomastery').src="images/champMasteryThree.png";
+                	}
+                	else if(champTwoPoints>=1800){
+                		document.getElementById('champtwomastery').src="images/champMasteryTwo.png";
+                	}
+                	else if(champTwoPoints<1800){
+                		document.getElementById('champtwomastery').src="images/champMasteryOne.png";
+                	}
                 	if(champTwoPoints.toString().length==5){
                 		champTwoPoints=""+champTwoPoints.toString()[0]+""+champTwoPoints.toString()[1]+"."+champTwoPoints.toString()[2]+"k";	
                 	}
@@ -37,6 +52,21 @@
                 }
                 else if(i==1){
                 	champOnePoints=masteryData[i].championPoints;
+                	if(champOnePoints>=21600){
+                		document.getElementById('champonemastery').src="images/champMasteryFive.png";
+                	}
+                	else if(champOnePoints>=12600){
+                		document.getElementById('champonemastery').src="images/champMasteryFour.png";
+                	}
+                	else if(champOnePoints>=6000){
+                		document.getElementById('champonemastery').src="images/champMasteryThree.png";
+                	}
+                	else if(champOnePoints>=1800){
+                		document.getElementById('champonemastery').src="images/champMasteryTwo.png";
+                	}
+                	else if(champOnePoints<1800){
+                		document.getElementById('champonemastery').src="images/champMasteryOne.png";
+                	}
                 	if(champOnePoints.toString().length==5){
                 		champOnePoints=""+champOnePoints.toString()[0]+""+champOnePoints.toString()[1]+"."+champOnePoints.toString()[2]+"k";	
                 	}
@@ -49,6 +79,21 @@
                 }
                 else if(i==2){
                 	champThreePoints=masteryData[i].championPoints;
+                	if(champThreePoints>=21600){
+                		document.getElementById('champthreemastery').src="images/champMasteryFive.png";
+                	}
+                	else if(champThreePoints>=12600){
+                		document.getElementById('champthreemastery').src="images/champMasteryFour.png";
+                	}
+                	else if(champThreePoints>=6000){
+                		document.getElementById('champthreemastery').src="images/champMasteryThree.png";
+                	}
+                	else if(champThreePoints>=1800){
+                		document.getElementById('champthreemastery').src="images/champMasteryTwo.png";
+                	}
+                	else if(champThreePoints<1800){
+                		document.getElementById('champthreemastery').src="images/champMasteryOne.png";
+                	}
                 	if(champThreePoints.toString().length==5){
                 		champThreePoints=""+champThreePoints.toString()[0]+""+champThreePoints.toString()[1]+"."+champThreePoints.toString()[2]+"k";	
                 	}
@@ -117,16 +162,19 @@
     			if(x == 0) {
     	            document.getElementById('champtwo').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
     	            document.getElementById('champtwopoints').style.visibility='visible';
+    	            document.getElementById('champtwomastery').style.visibility='visible';
     	            document.getElementById('champtwopoints').innerHTML=champTwoPoints;
     	            document.getElementById('champtwo').style.opacity = 1;
     	        } else if(x == 1) {
     	            document.getElementById('champone').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
     	            document.getElementById('champonepoints').style.visibility='visible';
+    	            document.getElementById('champonemastery').style.visibility='visible';
     	            document.getElementById('champonepoints').innerHTML=champOnePoints;
     	            document.getElementById('champone').style.opacity = 1;
     	        } else if(x == 2) {
     	            document.getElementById('champthree').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
     	            document.getElementById('champthreepoints').style.visibility='visible';
+    	            document.getElementById('champthreemastery').style.visibility='visible';
     	            document.getElementById('champthreepoints').innerHTML=champThreePoints;
     	            document.getElementById('champthree').style.opacity = 1;
     	        }
@@ -170,16 +218,19 @@
             if(x == 0) {
                 document.getElementById('champtwo').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
                 document.getElementById('champtwopoints').style.visibility='visible';
+                document.getElementById('champtwomastery').style.visibility='visible';
 	            document.getElementById('champtwopoints').innerHTML=champTwoPoints;
                 document.getElementById('champtwo').style.opacity = 1;
             } else if(x == 1) {
                 document.getElementById('champone').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
                 document.getElementById('champonepoints').style.visibility='visible';
+                document.getElementById('champonemastery').style.visibility='visible';
 	            document.getElementById('champonepoints').innerHTML=champOnePoints;
                 document.getElementById('champone').style.opacity = 1;
             } else if(x == 2) {
                 document.getElementById('champthree').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
                 document.getElementById('champthreepoints').style.visibility='visible';
+                document.getElementById('champthreemastery').style.visibility='visible';
 	            document.getElementById('champthreepoints').innerHTML=champThreePoints;
                 document.getElementById('champthree').style.opacity = 1;
             }
