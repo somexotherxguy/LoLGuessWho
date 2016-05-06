@@ -1,6 +1,9 @@
 (function() {
 
 	var guessCount = 0;
+	var champsLeft = 3;
+	var champOneFlag = 0, champTwoFlag = 0, champThreeFlag = 0;
+	var correctFlag = 0, giveUpFlag = 0;
 	var champOnePoints, champTwoPoints, champThreePoints;
     var summoner = window.localStorage.getItem('summoner');
     
@@ -40,7 +43,13 @@
                 	else if(champTwoPoints<1800){
                 		document.getElementById('champtwomastery').src="images/champMasteryOne.png";
                 	}
-                	if(champTwoPoints.toString().length==5){
+                	if(champTwoPoints.toString().length==7){
+                		champTwoPoints=""+champTwoPoints.toString()[0]+"."+champTwoPoints.toString()[1]+""+champTwoPoints.toString()[2]+"m";
+                	}
+                	else if(champTwoPoints.toString().length==6){
+                		champTwoPoints=""+champTwoPoints.toString()[0]+""+champTwoPoints.toString()[1]+""+champTwoPoints.toString()[2]+"."+champTwoPoints.toString()[3]+"k";
+                	}
+                	else if(champTwoPoints.toString().length==5){
                 		champTwoPoints=""+champTwoPoints.toString()[0]+""+champTwoPoints.toString()[1]+"."+champTwoPoints.toString()[2]+"k";	
                 	}
                 	else if(champTwoPoints.toString().length==4){
@@ -67,7 +76,13 @@
                 	else if(champOnePoints<1800){
                 		document.getElementById('champonemastery').src="images/champMasteryOne.png";
                 	}
-                	if(champOnePoints.toString().length==5){
+                	if(champOnePoints.toString().length==7){
+                		champOnePoints=""+champOnePoints.toString()[0]+"."+champOnePoints.toString()[1]+""+champOnePoints.toString()[2]+"m";
+                	}
+                	else if(champOnePoints.toString().length==6){
+                		champOnePoints=""+champOnePoints.toString()[0]+""+champOnePoints.toString()[1]+""+champOnePoints.toString()[2]+"."+champOnePoints.toString()[3]+"k";
+                	}
+                	else if(champOnePoints.toString().length==5){
                 		champOnePoints=""+champOnePoints.toString()[0]+""+champOnePoints.toString()[1]+"."+champOnePoints.toString()[2]+"k";	
                 	}
                 	else if(champOnePoints.toString().length==4){
@@ -94,7 +109,13 @@
                 	else if(champThreePoints<1800){
                 		document.getElementById('champthreemastery').src="images/champMasteryOne.png";
                 	}
-                	if(champThreePoints.toString().length==5){
+                	if(champThreePoints.toString().length==7){
+                		champThreePoints=""+champThreePoints.toString()[0]+"."+champThreePoints.toString()[1]+""+champThreePoints.toString()[2]+"m";
+                	}
+                	else if(champThreePoints.toString().length==6){
+                		champThreePoints=""+champThreePoints.toString()[0]+""+champThreePoints.toString()[1]+""+champThreePoints.toString()[2]+"."+champThreePoints.toString()[3]+"k";
+                	}
+                	else if(champThreePoints.toString().length==5){
                 		champThreePoints=""+champThreePoints.toString()[0]+""+champThreePoints.toString()[1]+"."+champThreePoints.toString()[2]+"k";	
                 	}
                 	else if(champThreePoints.toString().length==4){
@@ -155,31 +176,52 @@
     	var champGuessName = document.getElementById('champguess').value;
         champGuessName = champGuessName.replace(re, function(x){return x.toUpperCase();});
         document.getElementById('champguess').value = "";
-    	console.log(champGuessName);
     	for(var x = 0; x < champData.length; x++){
-            console.log(champData[x].name);
     		if(champGuessName==champData[x].name){
+    			correctFlag = 1;
     			if(x == 0) {
-    	            document.getElementById('champtwo').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
+    				console.log(correctFlag);
+    				document.getElementById('champtwo').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
     	            document.getElementById('champtwopoints').style.visibility='visible';
     	            document.getElementById('champtwomastery').style.visibility='visible';
     	            document.getElementById('champtwopoints').innerHTML=champTwoPoints;
     	            document.getElementById('champtwo').style.opacity = 1;
+    	            if(champsLeft>=0&&champTwoFlag!=1&&giveUpFlag==0){
+    	            	champsLeft=champsLeft-1;
+    	            	document.getElementById('guessnotification').innerHTML="Correct! "+champsLeft+" champs left."
+    	            }
+    	            champTwoFlag=1;
     	        } else if(x == 1) {
     	            document.getElementById('champone').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
     	            document.getElementById('champonepoints').style.visibility='visible';
     	            document.getElementById('champonemastery').style.visibility='visible';
     	            document.getElementById('champonepoints').innerHTML=champOnePoints;
     	            document.getElementById('champone').style.opacity = 1;
+    	            if(champsLeft>=0&&champOneFlag!=1&&giveUpFlag==0){
+    	            	champsLeft=champsLeft-1;
+    	            	document.getElementById('guessnotification').innerHTML="Correct! "+champsLeft+" champs left."
+    	            }
+    	            champOneFlag=1;
     	        } else if(x == 2) {
     	            document.getElementById('champthree').src = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champData[x].key + "_0.jpg";
     	            document.getElementById('champthreepoints').style.visibility='visible';
     	            document.getElementById('champthreemastery').style.visibility='visible';
     	            document.getElementById('champthreepoints').innerHTML=champThreePoints;
     	            document.getElementById('champthree').style.opacity = 1;
+    	            if(champsLeft>=0&&champThreeFlag!=1&&giveUpFlag==0){
+    	            	champsLeft=champsLeft-1;
+    	            	document.getElementById('guessnotification').innerHTML="Correct! "+champsLeft+" champs left."
+    	            }
+    	            champThreeFlag=1;
     	        }
     		}
     	}
+    	
+    	if(correctFlag==0){
+			document.getElementById('guessnotification').innerHTML="Nope! "+champsLeft+" champs left."
+		}
+		correctFlag=0;
+		
         guessCount++;
         if(guessCount >= 999){
             guessCount = 0;
@@ -235,6 +277,8 @@
                 document.getElementById('champthree').style.opacity = 1;
             }
     	}
+        document.getElementById('guessnotification').innerHTML="Try another summoner!"
+        giveUpFlag=1;
     }
     
     function checkWin(){
