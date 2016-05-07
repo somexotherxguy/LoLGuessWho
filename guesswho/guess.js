@@ -189,8 +189,8 @@
     	            if(champsLeft>=0&&champTwoFlag!=1&&giveUpFlag==0){
     	            	champsLeft=champsLeft-1;
     	            	document.getElementById('guessnotification').innerHTML="Correct! "+champsLeft+" champs left."
-                        document.getElementById('testimg').style.opacity = .7;
-                        window.setTimeout(function(){ document.getElementById('testimg').style.opacity = 0; }, 1500);
+                        document.getElementById('greenfade').style.opacity = .7;
+                        window.setTimeout(function(){ document.getElementById('greenfade').style.opacity = 0; }, 1500);
     	            }
     	            champTwoFlag=1;
     	        } else if(x == 1) {
@@ -202,8 +202,8 @@
     	            if(champsLeft>=0&&champOneFlag!=1&&giveUpFlag==0){
     	            	champsLeft=champsLeft-1;
     	            	document.getElementById('guessnotification').innerHTML="Correct! "+champsLeft+" champs left."
-                        document.getElementById('testimg').style.opacity = .7;
-                        window.setTimeout(function(){ document.getElementById('testimg').style.opacity = 0; }, 1500);
+                        document.getElementById('greenfade').style.opacity = .7;
+                        window.setTimeout(function(){ document.getElementById('greenfade').style.opacity = 0; }, 1500);
     	            }
     	            champOneFlag=1;
     	        } else if(x == 2) {
@@ -215,8 +215,8 @@
     	            if(champsLeft>=0&&champThreeFlag!=1&&giveUpFlag==0){
     	            	champsLeft=champsLeft-1;
     	            	document.getElementById('guessnotification').innerHTML="Correct! "+champsLeft+" champs left."
-                        document.getElementById('testimg').style.opacity = .7;
-                        window.setTimeout(function(){ document.getElementById('testimg').style.opacity = 0; }, 1500);
+                        document.getElementById('greenfade').style.opacity = .7;
+                        window.setTimeout(function(){ document.getElementById('greenfade').style.opacity = 0; }, 1500);
     	            }
     	            champThreeFlag=1;
     	        }
@@ -225,6 +225,8 @@
     	
     	if(correctFlag==0){
 			document.getElementById('guessnotification').innerHTML="Nope! "+champsLeft+" champs left."
+            document.getElementById('redfade').style.opacity = .6;
+            window.setTimeout(function(){ document.getElementById('redfade').style.opacity = 0; }, 1500);
 		}
 		correctFlag=0;
 		
