@@ -104,6 +104,10 @@ img.loadingart{
     padding: 10px;
 }
 
+.masterypoints{
+    text-shadow: 3px 3px 3px black;
+}
+
 #champonepoints{
 	visibility: hidden;
 	z-index: 100;
@@ -196,13 +200,28 @@ img.loadingart{
 }
 
 #timertext{
-    display: inline-block;  
+    display: inline-block;
     padding: 10px;
     background-color: #1a1a1a;
     opacity: 0.8;
     font-size: 20px;
     color: #ffffff;
     font-family: "Arial", Helvetica, sans-serif;
+}
+
+#endtext{
+    margin-top: -35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #1a1a1a;
+    opacity: 0.8;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Arial", Helvetica, sans-serif;
+    width: 800px;
+    visibility: hidden;
 }
 
 #giveup{
@@ -215,7 +234,7 @@ img.loadingart{
     border: none;
     color: #ffffff;
     font-size: 20px;
-    border: solid 3px;
+    border: ridge 3px;
 }
 
 #giveup:hover{
@@ -227,6 +246,7 @@ img.loadingart{
 #guesstransbar{
 	position: relative;
     padding: 10px;
+    width:auto;
 }
 
 #champguess{
@@ -244,32 +264,11 @@ img.loadingart{
     border: 5px;
 }
 
-#guessbar{
-	position: relative;
-    padding: 20px;
-    width: 945px;
-    margin: 0px auto;
-    margin-top: -67px;
-    pointer-events: none;
-}
-
-#guessnotification{
-	display: inline-block;
-    padding: 10px;
-    width: 245px;
-    background-color: #1a1a1a;
-    opacity: 0.8;
-    font-size: 20px;
-    color: #ffffff;
-    font-family: "Arial", Helvetica, sans-serif;
-    text-align: center;
-}
-
 #greenfade{
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
@@ -277,16 +276,18 @@ img.loadingart{
     height: 100%;
     border-radius: 10px;
     -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
     filter: blur(15px);
     opacity: 0;
     z-index:-1
 }
 
 #redfade{
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
@@ -294,7 +295,36 @@ img.loadingart{
     height: 100%;
     border-radius: 10px;
     -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
     filter: blur(15px);
     opacity: 0;
     z-index:-1
+}
+
+#orangefade{
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    filter: blur(15px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='13');
+    opacity: 0;
+    z-index:-1
+}
+
+#endtext{
+    color: white;
+    font-family: "Arial", Helvetica, sans-serif;
+	font-size: 20px;
+	text-align: center;
 }

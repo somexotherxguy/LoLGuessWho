@@ -21,7 +21,7 @@
 </div>
 
 <div id="transbox">
-    <div id="guesswho"><span id="pagetitle">Guess Who Mastery?</span></div>
+    <div id="guesswho"><span id="pagetitle">LoLGuessWho</span></div>
     <div id="intro"><p>Time to make your guesses! Use the bar at the <span style="font-weight: bold">BOTTOM</span> to guess the current summoner's
     	top three mastery champions. Use the bar
     	at the <span style="font-weight: bold">TOP</span> to search for a new summoner.</p>
@@ -30,6 +30,7 @@
         <input id="summonersearch" type="text" placeholder="Search for a Summoner..." ></input>
     </form>
 </div>
+
 <div id="infobar">
     <span id="guesstext">Number of Guesses: <span id="numguess">0</span></span>
     <span style="padding-right: 75px"></span>
@@ -40,16 +41,17 @@
 </div>
 
 <div id="champimgs">
+    <img id="orangefade" src="images/solid_orange.png" alt="">
     <img id="greenfade" src="images/solid_green.jpg" alt="">
     <img id="redfade" src="images/solid_red.jpg" alt="">
     <img class="loadingart" id="champone" style="opacity: .8" src="images/questionmark.jpg">
-    <p id="champonepoints">37.5k</p>
+    <p class="masterypoints" id="champonepoints">0k</p>
     <img id="champonemastery" src="images/champMasteryFive.png">
     <img class="loadingart" id="champtwo" style="opacity: .8" src="images/questionmark.jpg">
-    <p id="champtwopoints">37.5k</p>
+    <p class="masterypoints" id="champtwopoints">0k</p>
     <img id="champtwomastery" src="images/champMasteryFive.png">
     <img class="loadingart" id="champthree" style="opacity: .8" src="images/questionmark.jpg">
-    <p id="champthreepoints">37.5k</p>
+    <p class="masterypoints" id="champthreepoints">0k</p>
     <img id="champthreemastery" src="images/champMasteryFive.png">
 </div>
 
@@ -57,10 +59,7 @@
     <form id="champguessform">
         <input id="champguess" type="text" placeholder="Guess a Champion..." autocomplete="off"></input>
     </form>
-</div>
-
-<div id="guessbar">
-	<span id="guessnotification">3 champs left.</span>
+    <span id="endtext"></span>
 </div>
 
 <script src="guess.js" type="text/javascript"></script>
