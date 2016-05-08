@@ -1,4 +1,4 @@
-# LoLGuessWho
+# LoLGuessWho [Live Site](http://somexotherxguy.github.io/)
 Submission for the 2016 Riot API Challange.
 
 A game where the user tries to guess a summoner's top 3 mastery champions. It can be a game to play amongst friends or even to see how well you know your favorite pro-player/streamer.
