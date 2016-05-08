@@ -9,8 +9,11 @@ If you would like to view a demo of the site go [here](https://www.youtube.com/w
 
 # Accessing the Site
 There are two ways to access the site.
+
 1. Go [here](http://somexotherxguy.github.io/) to visit the live site hosted on github pages.
+
 2. Or clone down the files and open the home.html file in your preferred browser.
+
 Just a note, the site uses some fancy CSS which is not supported by IE or Edge. It is recommended to open the site in Mozilla Firefox or Google Chrome.
 
 # Server
